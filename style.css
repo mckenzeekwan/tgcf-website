@@ -1,0 +1,29 @@
+html {
+  background: url("img/home-page3.jpg") no-repeat center fixed;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+body {
+  background-color: darksalmon;
+  border-radius: 50px;
+  width: 600px;
+  margin: 500px auto;
+  padding: 50px 100px 50px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.nav a {
+  margin: 0px 25px;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+a:hover {
+  text-decoration: underline;
+}
