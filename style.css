@@ -4,6 +4,9 @@ html {
   opacity: 0.9;
 }
 
+div {
+  text-align: left;
+}
 body {
   background-color: darksalmon;
   border-radius: 50px;
@@ -29,9 +32,23 @@ a:hover {
 }
 
 .correct {
-  color: green;
-}
-.correctin {
   border: 2px solid green;
-  text-decoration: black;
+}
+
+.wrong {
+  border: 2px solid red;
+}
+
+.feedbackq {
+  color: red;
+}
+button {
+  background-color: burlywood;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
+}
+
+h2,
+h3 {
+  margin-top: 25px;
 }
