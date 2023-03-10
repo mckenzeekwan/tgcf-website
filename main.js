@@ -9,10 +9,11 @@ function btnClicked() {
   let answer4 = document.getElementById("answer4-in").value.toLowerCase();
   let answer5 = document.getElementById("answer5-in").value.toLowerCase();
   let score = answer1 + answer2 + answer3 + answer4 + answer5;
+  var isCorrect = 0;
 
   if (answer1 === "mo xiang tong xiu") {
     document.getElementById("answer1-in").className = "correct";
-    document.getElementById("score").innerHTML = score + 1;
+    isCorrect += 1;
   } else {
     document.getElementById("answer1-in").className = "wrong";
     document.getElementById("feedback1").className = "feedbackq";
@@ -23,7 +24,7 @@ function btnClicked() {
   //QUESTION 2
   if (answer2 === "xianle" || answer2 === "xianle nation") {
     document.getElementById("answer2-in").className = "correct";
-    document.getElementById("score").innerHTML = score + 1;
+    isCorrect += 1;
   } else {
     document.getElementById("answer2-in").className = "wrong";
     document.getElementById("feedback2").className = "feedbackq";
@@ -42,7 +43,7 @@ function btnClicked() {
     answer3 === "the ghost king"
   ) {
     document.getElementById("answer3-in").className = "correct";
-    document.getElementById("score").innerHTML = score + 1;
+    isCorrect += 1;
   } else {
     document.getElementById("answer3-in").className = "wrong";
     document.getElementById("feedback3").className = "feedbackq";
@@ -59,7 +60,7 @@ function btnClicked() {
     answer4 === "lady wind master"
   ) {
     document.getElementById("answer4-in").className = "correct";
-    document.getElementById("score").innerHTML = score + 1;
+    isCorrect += 1;
   } else {
     document.getElementById("answer4-in").className = "wrong";
     document.getElementById("feedback4").className = "feedbackq";
@@ -77,12 +78,34 @@ function btnClicked() {
     answer5 === "qirong"
   ) {
     document.getElementById("answer5-in").className = "correct";
-    document.getElementById("score").innerHTML = score + 1;
+    isCorrect += 1;
   } else {
     document.getElementById("answer5-in").className = "wrong";
     document.getElementById("feedback5").className = "feedbackq";
     document.getElementById("feedback5").innerHTML =
       "Incorrect, the correct answer is: Qi Rong";
   }
-  document.getElementById("score").innerHTML = +score + "/5";
+  document.getElementById("score").innerHTML = isCorrect;
+
+  let percent = (isCorrect / 5) * 100;
+  document.getElementById("percent").innerHTML = Math.round(percent);
+
+  if (isCorrect === 5) {
+    document.getElementById("feedback").innerHTML =
+      "Perfect! You know everything about 'Heaven Official's Blessing'!";
+  } else if (isCorrect === 4) {
+    document.getElementById("feedback").innerHTML =
+      "Good Job! You know a lot about 'Heaven Official's Blessing'!";
+  } else if (isCorrect === 3) {
+    document.getElementById("feedback").innerHTML =
+      "Well Done. Try doing the test again after you have reviewed you facts.";
+  } else if (isCorrect === 2) {
+    document.getElementById("feedback").innerHTML = "Good luck next time!";
+  } else if (isCorrect === 1) {
+    document.getElementById("feedback").innerHTML =
+      "Good Try, maybe you should read about the characters more.";
+  } else {
+    document.getElementById("feedback").innerHTML =
+      "Are you sure you know the characters in 'Heaven Official's Blessing'?";
+  }
 }

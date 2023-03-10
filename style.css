@@ -7,9 +7,8 @@ html {
 div {
   text-align: left;
 }
+
 body {
-  background-color: darksalmon;
-  border-radius: 50px;
   width: 600px;
   margin: 100px auto;
   padding: 50px 100px 50px;
@@ -18,8 +17,24 @@ body {
   opacity: 0.9;
 }
 
+.about {
+  background-color: darksalmon;
+  border-radius: 50px;
+}
+
+.quiz {
+  background-color: darksalmon;
+  border-radius: 50px;
+}
+
+.home {
+  background-color: darksalmon;
+  border-radius: 50px;
+  margin: 500px auto;
+}
 .nav a {
   margin: 0px 25px;
+  font-size: larger;
 }
 
 a {
